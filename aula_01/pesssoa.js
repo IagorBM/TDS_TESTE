@@ -24,6 +24,9 @@ module.exports = {
     consultaTodasAsPessoa
 } 
 
+function deletaPessoa(id){
+    pessoa.splice[id,1]
+}
 
 
 console.log(consultaTodasAsPessoa());

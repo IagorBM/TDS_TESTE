@@ -10,4 +10,5 @@ pessoa.cadastraPessoa("Centauri F",76);
 pessoa.cadastraPessoa("Centauri G",25);
 pessoa.cadastraPessoa("Proxima Centauri ",14);
 
+
 console.log(pessoa.consultaTodasAsPessoa());
