@@ -1,49 +1,13 @@
-//soma de dois valores
-function somaDeDoisValores(a,b) {  
-    return a + b;
-};
-console.log("A soma de de 4 e 2 é ",somaDeDoisValores(4,2));
+const pessoa = require("./pesssoa.js");
 
+pessoa.cadastraPessoa("Iagor",18);
+pessoa.cadastraPessoa("Centauri A",23);
+pessoa.cadastraPessoa("Centauri B",24);
+pessoa.cadastraPessoa("Centauri C",43);
+pessoa.cadastraPessoa("Centauri D",56);
+pessoa.cadastraPessoa("Centauri E",12);
+pessoa.cadastraPessoa("Centauri F",76);
+pessoa.cadastraPessoa("Centauri G",25);
+pessoa.cadastraPessoa("Proxima Centauri ",14);
 
-//multiplicação de dois valores
-function multiplicacao_de_dois_valores(a,b) {
-    return a*b;
-}
-console.log("A multiplicação de 4 + 8 é :", multiplicacao_de_dois_valores(4,8))
-
-
-//divisão de dois valores
-function DivisaoDeDoisValores(a,b) {   
-    return a/b;
-}
-console.log("A divisão entre 5 e 10 é", DivisaoDeDoisValores(10,5));
-
-//trabaiando com array list
-
-const data = []
-
-data.push(2)
-data.push(1)
-data.push(6)
-data.push(5)
-data.push(2)
-data.push(43)
-
-
-console.log(data);
-
-data.splice(4,1)
-
-console.log(data)
-
-//utilizando objetos
-
-const pessoa = {
-    id: 1,
-    nome: "Iagor",
-    idade: 18
-}
-
-
-
-
+console.log(pessoa.consultaTodasAsPessoa());
