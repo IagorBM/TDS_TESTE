@@ -1,14 +1,15 @@
-const pessoa = require("./pesssoa.js");
+const carai = require("./pesssoa.js");
 
-pessoa.cadastraPessoa("Iagor",18);
-pessoa.cadastraPessoa("Centauri A",23);
-pessoa.cadastraPessoa("Centauri B",24);
-pessoa.cadastraPessoa("Centauri C",43);
-pessoa.cadastraPessoa("Centauri D",56);
-pessoa.cadastraPessoa("Centauri E",12);
-pessoa.cadastraPessoa("Centauri F",76);
-pessoa.cadastraPessoa("Centauri G",25);
-pessoa.cadastraPessoa("Proxima Centauri ",14);
+carai.cadastraPessoa("Iagor",18);
+carai.cadastraPessoa("Centauri A",23);
+carai.cadastraPessoa("Centauri B",24);
+carai.cadastraPessoa("Centauri C",43);
+carai.cadastraPessoa("Centauri D",56);
+carai.cadastraPessoa("Centauri E",12);
+carai.cadastraPessoa("Centauri F",76);
+carai.cadastraPessoa("Centauri G",25);
+carai.cadastraPessoa("Proxima Centauri ",14);
 
-
-console.log(pessoa.consultaTodasAsPessoa());
+console.log(carai.consultaTodasAsPessoa());
+console.log(carai.deletaPessoa(6));
+console.log(carai.consultaTodasAsPessoa());

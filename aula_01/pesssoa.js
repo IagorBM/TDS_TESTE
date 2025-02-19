@@ -21,11 +21,45 @@ function consultaTodasAsPessoa(){
 
 module.exports = {
     cadastraPessoa,
-    consultaTodasAsPessoa
+    consultaTodasAsPessoa,
+    deletaPessoa
 } 
 
 function deletaPessoa(id){
-    pessoa.splice[id,1]
+    var teveRetorno = true;
+    for(let i=0; i<pessoas.length;i++){
+        if(pessoas[i].id == id){
+            pessoas.splice(i,1);
+            return "deletado";
+        }else {
+            teveRetorno = false;
+        }
+    }
+
+    //pessoas.forEach((item,index)=>{})
+        // representação do "FOR" utilizando a propiedade "filter" do   Arraylist para procurar
+    /*
+        const inicio2 = pessoas.filter((item,index)=> {
+            item.id == id ?
+            pessoas.splice(index,1 )
+            : undefined
+        });
+    */
+
+    /*const inicio = pessoas.filter((item,index)=>{
+        //if (item.id == id){
+         //   return index
+        //}
+
+    })
+
+    if(inicio.length < 0){
+        return "Código da pessoa inválido!"
+    }
+    else{
+        pessoas.splice(inicio,1)
+        return "pessoa deletada com sucesso"
+    }*/
 }
 
 
