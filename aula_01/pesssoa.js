@@ -22,8 +22,18 @@ function consultaTodasAsPessoa(){
 module.exports = {
     cadastraPessoa,
     consultaTodasAsPessoa,
-    deletaPessoa
+    deletaPessoa,
+    consultaPessoaPeloID,
+    atualizaPessoa
 } 
+
+function consultaPessoaPeloID(id){
+    return pessoas.filter(item => item.id == id)
+}
+
+function atualizaPessoa(id,nome,idade){
+
+}
 
 function deletaPessoa(id){
     var teveRetorno = true;

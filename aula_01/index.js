@@ -13,3 +13,5 @@ carai.cadastraPessoa("Proxima Centauri ",14);
 console.log(carai.consultaTodasAsPessoa());
 console.log(carai.deletaPessoa(6));
 console.log(carai.consultaTodasAsPessoa());
+
+console.log(carai.consultaTodasAsPessoa(4));
