@@ -28,11 +28,15 @@ module.exports = {
 } 
 
 function consultaPessoaPeloID(id){
-    return pessoas.filter(item => item.id == id)
+    return pessoas.filter(item => item.id == id);
 }
 
 function atualizaPessoa(id,nome,idade){
-
+    pessoas.filter(item => item.id == id);
+    nome = 'Show';
+    idade = 57
+    return  
+ 
 }
 
 function deletaPessoa(id){
