@@ -47,3 +47,8 @@ const pessoa = {
 
 
 
+module.exports={
+    somaDeDoisValores,
+    multiplicacao_de_dois_valores,
+    DivisaoDeDoisValores,
+}
