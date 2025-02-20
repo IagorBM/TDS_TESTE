@@ -9,13 +9,13 @@ const pessoas = [];
 var idSeq = 1;
 
 
-function cadastraPessoa(nome,idade){
-    var pessoa = {id: idSeq++, nome: nome, idade: idade};
+function cadastraPessoa(nome, idade) {
+    var pessoa = { id: idSeq++, nome: nome, idade: idade };
     pessoas.push(pessoa);
     return pessoa;
 }
 
-function consultaTodasAsPessoa(){
+function consultaTodasAsPessoa() {
     return pessoas;
 }
 
@@ -25,33 +25,42 @@ module.exports = {
     deletaPessoa,
     consultaPessoaPeloID,
     atualizaPessoa
-} 
+}
 
-function consultaPessoaPeloID(id){
+function consultaPessoaPeloID(id) {
     return pessoas.filter(item => item.id == id);
 }
 
-function atualizaPessoa(id,nome,idade){
-    pessoas.filter(item => item.id == id);
-    nome = 'Show';
-    idade = 57
-    return  
- 
+function atualizaPessoa(id, nome, idade) {
+    var teveRetorno = false
+    for (let i; i = 0; i < pessoas.length, i++) {
+        if (pessoas[i].id == id) {
+            pessoas[i].nome = nome;
+            pessoas[i].idade = idade;
+            return pessoas[i];
+        } else {
+            teveRetorno = false;
+        }
+
+    }   
+    if (!teveRetorno) {
+        return "O código da Pessoa é inválido";
+    }
 }
 
-function deletaPessoa(id){
+function deletaPessoa(id) {
     var teveRetorno = true;
-    for(let i=0; i<pessoas.length;i++){
-        if(pessoas[i].id == id){
-            pessoas.splice(i,1);
+    for (let i = 0; i < pessoas.length; i++) {
+        if (pessoas[i].id == id) {
+            pessoas.splice(i, 1);
             return "deletado";
-        }else {
+        } else {
             teveRetorno = false;
         }
     }
 
     //pessoas.forEach((item,index)=>{})
-        // representação do "FOR" utilizando a propiedade "filter" do   Arraylist para procurar
+    // representação do "FOR" utilizando a propiedade "filter" do   Arraylist para procurar
     /*
         const inicio2 = pessoas.filter((item,index)=> {
             item.id == id ?
